@@ -173,12 +173,12 @@ body {
   }
 }
 .gridlines {
-  background-image: 
-    linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%), 
-    linear-gradient(-45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
-  overflow: auto; 
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 98.5vw;
+  height: 100vh;
+  pointer-events: none; /* Prevent lines from interfering with clicks */
 }
 
 
@@ -192,11 +192,13 @@ body {
   background-size: 80px 100vh; /* Adjust line width and height as needed */
   background-image: linear-gradient(to right, rgba(200, 200, 200, 0.2) 1px, transparent 0);
 }
+
 .main-container {
   display: flex;
   flex-direction: column;
   height: 100%;   /* Fill the height to allow content overflow */
 }
+
 .gridlines::after {
   content: "";
   position: absolute;

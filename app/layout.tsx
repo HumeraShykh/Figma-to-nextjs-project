@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Trading app for traders.",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: {children:React.ReactNode}) {
   return (
     <html lang="en">
       <body>
